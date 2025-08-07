@@ -1,12 +1,8 @@
 """Unit tests for API routes using the built-in HTTP server."""
 
 import json
-import os
-import sys
 from http.client import HTTPConnection
 from threading import Thread
-
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 from api.routes import create_server
 

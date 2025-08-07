@@ -1,10 +1,5 @@
 """Unit tests for service adapters."""
 
-import os
-import sys
-
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
-
 from service.adapters.crypto import get_crypto_price
 from service.adapters.stock import get_stock_price
 
