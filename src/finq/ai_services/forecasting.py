@@ -13,7 +13,7 @@ class ForecastingService(BaseService):
     def __init__(self) -> None:
         self.model: Any = None
 
-    def authenticate(self, *args, **kwargs) -> None:  # pragma: no cover - no auth needed
+    def authenticate(self, *args, **kwargs) -> None:  # pragma: no cover
         """Prophet does not require authentication."""
         return None
 
@@ -22,7 +22,9 @@ class ForecastingService(BaseService):
         try:
             from prophet import Prophet
         except Exception as exc:  # pragma: no cover - dependency optional
-            raise RuntimeError("prophet package is required for ForecastingService") from exc
+            raise RuntimeError(
+                "prophet package is required for ForecastingService"
+            ) from exc
 
         self.model = Prophet()
         self.model.fit(df)

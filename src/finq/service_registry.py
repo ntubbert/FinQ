@@ -3,7 +3,7 @@ from __future__ import annotations
 """Registry for dynamically loading FinQ services."""
 
 from importlib import import_module
-from typing import Any, Dict, Type
+from typing import Dict, Type
 
 from .ai_services.base import BaseService
 

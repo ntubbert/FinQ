@@ -55,11 +55,21 @@ class RequestHandler(BaseHTTPRequestHandler):
     <h1>Welcome to FinQ</h1>
     <p>Select an onboarding task to get started:</p>
     <ul>
-      <li><a href=\"/onboarding/accounting\">Link to accounting software</a></li>
-      <li><a href=\"/onboarding/bank\">Link to bank</a></li>
-      <li><a href=\"/onboarding/data\">Link to data sources</a></li>
-      <li><a href=\"/onboarding/business\">Describe business</a></li>
-      <li><a href=\"/onboarding/goals\">Determine goals</a></li>
+      <li>
+        <a href=\"/onboarding/accounting\">Link to accounting software</a>
+      </li>
+      <li>
+        <a href=\"/onboarding/bank\">Link to bank</a>
+      </li>
+      <li>
+        <a href=\"/onboarding/data\">Link to data sources</a>
+      </li>
+      <li>
+        <a href=\"/onboarding/business\">Describe business</a>
+      </li>
+      <li>
+        <a href=\"/onboarding/goals\">Determine goals</a>
+      </li>
     </ul>
   </body>
 </html>
