@@ -32,4 +32,3 @@ def get_service(name: str, **kwargs) -> BaseService:
     module = import_module(module_name)
     cls: type[BaseService] = getattr(module, class_name)
     return cls(**kwargs)
-

@@ -26,7 +26,8 @@ class OCRSummarizerService(BaseService):
             from PIL import Image
         except Exception as exc:  # pragma: no cover
             raise RuntimeError(
-                "pytesseract and pillow packages are required for OCRSummarizerService"
+                "pytesseract and pillow packages are required for "
+                "OCRSummarizerService"
             ) from exc
 
         text = pytesseract.image_to_string(Image.open(image_path))

@@ -11,7 +11,11 @@ from .base import BaseService
 class LLMChatService(BaseService):
     """Adapter for OpenAI-style chat completion models."""
 
-    def __init__(self, model: str = "gpt-3.5-turbo", client: Optional[Any] = None) -> None:
+    def __init__(
+        self,
+        model: str = "gpt-3.5-turbo",
+        client: Optional[Any] = None,
+    ) -> None:
         self.model = model
         self.client = client
         self.api_key: Optional[str] = None
@@ -23,7 +27,9 @@ class LLMChatService(BaseService):
             try:
                 import openai  # type: ignore
             except Exception as exc:  # pragma: no cover - dependency optional
-                raise RuntimeError("openai package is required for LLMChatService") from exc
+                raise RuntimeError(
+                    "openai package is required for LLMChatService"
+                ) from exc
             openai.api_key = self.api_key
             self.client = openai
 

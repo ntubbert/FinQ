@@ -13,6 +13,9 @@ def get_quote_service() -> QuoteService:
 
 
 @router.get("/{ticker}")
-async def read_quote(ticker: str, service: QuoteService = Depends(get_quote_service)):
+async def read_quote(
+    ticker: str,
+    service: QuoteService = Depends(get_quote_service),
+):
     """Return quote data for the given ticker."""
     return service.get_quote(ticker)
