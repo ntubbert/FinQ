@@ -1,5 +1,8 @@
 # FinQ
 
+[![CI](https://github.com/OWNER/FinQ/actions/workflows/ci.yml/badge.svg)](https://github.com/OWNER/FinQ/actions/workflows/ci.yml)
+[![Coverage Status](https://img.shields.io/codecov/c/github/OWNER/FinQ.svg)](https://codecov.io/gh/OWNER/FinQ)
+
 FinQ is an early-stage project for building a financial question answering service powered by FastAPI, SQLAlchemy, and LangChain.
 
 ## Goals
@@ -13,4 +16,3 @@ FinQ is an early-stage project for building a financial question answering servi
 3. Start the development server using `uvicorn finq.main:app --reload`.
 
 This repository currently contains scaffolding for further development.
-
