@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "finq"
+version = "0.1.0"
+description = "Simple financial quotes API"
+readme = "README.md"
+requires-python = ">=3.11"
+
+[tool.setuptools]
+packages = ["api", "service"]
