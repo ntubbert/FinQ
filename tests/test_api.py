@@ -45,3 +45,11 @@ def test_read_crypto_price():
 def test_read_crypto_price_not_found():
     status, _ = make_request("/crypto/UNKNOWN")
     assert status == 404
+
+
+def test_homepage_links():
+    status, data = make_request("/")
+    assert status == 200
+    body = data.decode()
+    assert "Link to accounting software" in body
+    assert "Link to bank" in body
